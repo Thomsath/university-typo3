@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-01-16T15:51:57Z" product-name="media_artbdg">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>Nom</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="published.description">
+				<source>published</source>
+			</trans-unit>
+			<trans-unit id="files.description">
+				<source>Fichiers</source>
+			</trans-unit>
+			<trans-unit id="reviews.description">
+				<source>reviews</source>
+			</trans-unit>
+			<trans-unit id="author.description">
+				<source>author</source>
+			</trans-unit>
+			<trans-unit id="categories.description">
+				<source>categories</source>
+			</trans-unit>
+			<trans-unit id="type.description">
+				<source>Type</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

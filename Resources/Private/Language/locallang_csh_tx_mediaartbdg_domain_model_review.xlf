@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-01-16T15:51:57Z" product-name="media_artbdg">
+		<header/>
+		<body>
+			<trans-unit id="mark.description">
+				<source>Note</source>
+			</trans-unit>
+			<trans-unit id="author.description">
+				<source>Auteur</source>
+			</trans-unit>
+			<trans-unit id="comment.description">
+				<source>Commentaire</source>
+			</trans-unit>
+			<trans-unit id="date.description">
+				<source>Date</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
