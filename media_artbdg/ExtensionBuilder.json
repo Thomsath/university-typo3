@@ -1,0 +1,51 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "Biblioth\u00e8que m\u00e9dia de Ana\u00efs Rodrigues, Dorian Giudice & Thomas Beaupertuis",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 8.7.0-8.7.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "8.7.0-8.7.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "media_artbdg",
+        "name": "media_artbdg",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "",
+                "email": "dorian.giudice@gmail.com",
+                "name": "Dorian Giudice",
+                "role": "Developer"
+            },
+            {
+                "company": "",
+                "email": "",
+                "name": "Thomas Beaupertuis",
+                "role": "Developer"
+            },
+            {
+                "company": "",
+                "email": "",
+                "name": "Anais Rodrigues",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "Artbdg"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2018-01-09 05:53",
+        "extension_builder_version": "8.7.0",
+        "be_user": " (1)"
+    }
+}

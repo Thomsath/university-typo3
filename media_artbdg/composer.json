@@ -1,0 +1,14 @@
+{
+    "name": "artbdg/media-artbdg",
+    "type": "typo3-cms-extension",
+    "description": "Biblioth\u00e8que m\u00e9dia de Ana\u00efs Rodrigues, Dorian Giudice & Thomas Beaupertuis",
+    "authors": [],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Artbdg\\MediaArtbdg\\": "Classes"
+        }
+    }
+}
