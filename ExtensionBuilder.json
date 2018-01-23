@@ -340,9 +340,9 @@
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
                             "relationName": "categories",
-                            "relationType": "zeroToMany",
+                            "relationType": "manyToMany",
                             "relationWire": "[wired]",
-                            "renderType": "inline",
+                            "renderType": "selectMultipleSideBySide",
                             "uid": "995023189239"
                         },
                         {
@@ -505,10 +505,10 @@
                 "actions": {
                     "controllerActionCombinations": "Media => list, show\nReview => new, create\n",
                     "noncacheableActions": "Media => search\nReview => create, new\n",
-                    "switchableActions": "Liste de medias\nMedia => list;Media->show;Media->search;Review->create;Review->new;"
+                    "switchableActions": "Liste de medias\nMedia ->list;Media->show;Media->search;Review->create;Review->new;"
                 },
                 "key": "pi1",
-                "name": "Liste de m\u00e9dias (Artbdg)"
+                "name": "Liste de medias (Artbdg)"
             },
             {
                 "actions": {
@@ -517,7 +517,7 @@
                     "switchableActions": "LIste auteurs\nAuthor->list;Author->show;"
                 },
                 "key": "pi2",
-                "name": "LIste d'auteur (Artbdg)"
+                "name": "Liste d'auteur (Artbdg)"
             },
             {
                 "actions": {
@@ -594,7 +594,7 @@
         }
     ],
     "log": {
-        "last_modified": "2018-01-16 03:51",
+        "last_modified": "2018-01-23 03:22",
         "extension_builder_version": "8.7.0",
         "be_user": " (1)"
     }

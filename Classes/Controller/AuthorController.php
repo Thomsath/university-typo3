@@ -19,6 +19,15 @@ namespace Artbdg\MediaArtbdg\Controller;
  */
 class AuthorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
+  /**
+   * authorRepository
+   *
+   * @var \Artbdg\MediaArtbdg\Domain\Repository\AuthorRepository
+   * @inject
+   */
+  protected $authorRepository = null;
+
+
     /**
      * action list
      *

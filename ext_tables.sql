@@ -226,8 +226,6 @@ CREATE TABLE tx_mediaartbdg_domain_model_category (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
-	media int(11) unsigned DEFAULT '0' NOT NULL,
-
 	name varchar(255) DEFAULT '' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -280,18 +278,23 @@ CREATE TABLE tx_mediaartbdg_domain_model_review (
 );
 
 #
-# Table structure for table 'tx_mediaartbdg_domain_model_category'
-#
-CREATE TABLE tx_mediaartbdg_domain_model_category (
-
-	media int(11) unsigned DEFAULT '0' NOT NULL,
-
-);
-
-#
 # Table structure for table 'tx_mediaartbdg_media_author_mm'
 #
 CREATE TABLE tx_mediaartbdg_media_author_mm (
+	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+	PRIMARY KEY (uid_local,uid_foreign),
+	KEY uid_local (uid_local),
+	KEY uid_foreign (uid_foreign)
+);
+
+#
+# Table structure for table 'tx_mediaartbdg_media_category_mm'
+#
+CREATE TABLE tx_mediaartbdg_media_category_mm (
 	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
 	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) unsigned DEFAULT '0' NOT NULL,

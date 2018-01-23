@@ -119,10 +119,5 @@ return [
             ],
         ],
     
-        'media' => [
-            'config' => [
-                'type' => 'passthrough',
-            ],
-        ],
     ],
 ];

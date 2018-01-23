@@ -8,7 +8,7 @@ call_user_func(
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Artbdg.MediaArtbdg',
             'Pi1',
-            'Liste de médias (Artbdg)'
+            'Liste de medias (Artbdg)'
         );
 
         $pluginSignature = str_replace('_', '', 'media_artbdg') . '_pi1';
@@ -18,7 +18,7 @@ call_user_func(
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Artbdg.MediaArtbdg',
             'Pi2',
-            'LIste d\&#039;auteur (Artbdg)'
+            'Liste d\&#039;auteur (Artbdg)'
         );
 
         $pluginSignature = str_replace('_', '', 'media_artbdg') . '_pi2';

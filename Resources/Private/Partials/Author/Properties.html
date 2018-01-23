@@ -5,6 +5,7 @@
 			<f:translate key="tx_mediaartbdg_domain_model_author.name" />
 		</td>
 		<td>
+		{author.name}
 		</td>
 	</tr>
 	<tr>
@@ -12,6 +13,7 @@
 			<f:translate key="tx_mediaartbdg_domain_model_author.bio" />
 		</td>
 		<td>
+		{author.bio}
 		</td>
 	</tr>
 	<tr>
@@ -19,6 +21,9 @@
 			<f:translate key="tx_mediaartbdg_domain_model_author.pictures" />
 		</td>
 		<td>
+				<f:for each="{author.pictures}" as="image" >
+					<f:image src="{image.originalResource.publicUrl}" width="200"/>
+				</f:for>
 		</td>
 	</tr>
 </table>
