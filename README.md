@@ -6,12 +6,12 @@ Clone the project
 
 ### TODO liste Bibliothèque média
 
-- [ ] Mise à disposition de l'extension sur github
-- [ ] Installation de l'extension sur le site
-- [ ] Création d'une page de présentation des membres du groupe, cette page pourra également contenir des exemples de spécificités du travail
-- [ ] Créations de sous-pages : média et auteurs
+- [x] Mise à disposition de l'extension sur github
+- [x] Installation de l'extension sur le site
+- [x] Création d'une page de présentation des membres du groupe, cette page pourra également contenir des exemples de spécificités du travail
+- [x] Créations de sous-pages : média et auteurs
 - [ ] Création du dossier de stockage des enregistrements
-- [ ] Création des jeux de test (média, auteurs, catégories ...)
+- [x] Création des jeux de test (média, auteurs, catégories ...)
 - [ ] Mise en place du plugin d'affichage des médias sur la page média
 - [ ] Mise en place du plugin d'affichage des auteurs sur la page auteur
 - [ ] Mise en place du plugin de remontée de média avec critère sur la page de présentation
