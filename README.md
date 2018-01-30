@@ -8,8 +8,8 @@ Clone the project
 [x] Créations de sous-pages : média et auteurs
 [ ] Création du dossier de stockage des enregistrements
 [x] Création des jeux de test (média, auteurs, catégories ...)
-[ ] Mise en place du plugin d'affichage des médias sur la page média
-[ ] Mise en place du plugin d'affichage des auteurs sur la page auteur
+[x] Mise en place du plugin d'affichage des médias sur la page média
+[x] Mise en place du plugin d'affichage des auteurs sur la page auteur
 [ ] Mise en place du plugin de remontée de média avec critère sur la page de présentation
 
 ### Développement
