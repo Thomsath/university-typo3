@@ -5,6 +5,7 @@
 			<f:translate key="tx_mediaartbdg_domain_model_media.name" />
 		</td>
 		<td>
+		{media.name}
 		</td>
 	</tr>
 	<tr>
@@ -12,6 +13,7 @@
 			<f:translate key="tx_mediaartbdg_domain_model_media.description" />
 		</td>
 		<td>
+		<f:format.html>{media.description}</f:format.html>
 		</td>
 	</tr>
 	<tr>
@@ -19,6 +21,7 @@
 			<f:translate key="tx_mediaartbdg_domain_model_media.image" />
 		</td>
 		<td>
+		<f:image src="{media.image.originalResource.publicUrl}" width="200"/>
 		</td>
 	</tr>
 	<tr>
@@ -26,13 +29,25 @@
 			<f:translate key="tx_mediaartbdg_domain_model_media.published" />
 		</td>
 		<td>
+			{media.published -> f:format.date()}
 		</td>
 	</tr>
+	<td>
+		<f:translate key="tx_mediaartbdg_domain_model_media.author" />
+	</td>
+	<td>
+		<f:for each="{media.author}" as="author" >
+			<f:link.action pageUid="{settings.authorsPage}" controller="Author" action="show" arguments="{author : author}">{author.name}</f:link.action></td>
+		</f:for>
+	</td>
 	<tr>
 		<td>
-			<f:translate key="tx_mediaartbdg_domain_model_media.files" />
+			<f:translate key="tx_mediaartbdg_domain_model_media.reviews" />
 		</td>
 		<td>
+			<f:for each="{media.reviews}" as="review" >
+				{review.comment}
+			</f:for>
 		</td>
 	</tr>
 </table>

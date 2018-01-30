@@ -13,7 +13,7 @@
 			<f:translate key="tx_mediaartbdg_domain_model_author.bio" />
 		</td>
 		<td>
-		{author.bio}
+		<f:format.html>{author.bio}</f:format.html>
 		</td>
 	</tr>
 	<tr>
@@ -24,6 +24,28 @@
 				<f:for each="{author.pictures}" as="image" >
 					<f:image src="{image.originalResource.publicUrl}" width="200"/>
 				</f:for>
+		</td>
+	</tr>
+	<tr>
+
+		<tr>
+			<td>
+				<f:translate key="tx_mediaartbdg_domain_model_author.medias" />
+			</td>
+			<td>
+				<f:for each="{author.medias}" as="media" >
+					<f:link.action action="show" arguments="{media : media}"> {media.name}</f:link.action></td>
+				</f:for>
+			</td>
+		</tr>
+
+		<td>
+			<f:translate key="tx_mediaartbdg_domain_model_author.socials" />
+		</td>
+		<td>
+			<f:for each="{author.socials}" as="social" >
+				<f:link.external uri='{social.title}' target="_blank">twitter</f:link.external>
+			</f:for>
 		</td>
 	</tr>
 </table>

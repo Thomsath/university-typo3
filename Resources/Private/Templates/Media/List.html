@@ -31,7 +31,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	<f:for each="{medias}" as="media">
 		<tr>
 			<td><f:link.action action="show" arguments="{media : media}"> {media.name}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{media : media}"> {media.description}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{media : media}"> <f:format.html>{media.description}</f:format.html></f:link.action></td>
 			<td><f:link.action action="show" arguments="{media : media}"> {media.image.originalResource.name}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{media : media}"> {media.published -> f:format.date()}</f:link.action></td>
 
@@ -41,9 +41,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			   <td><f:debug>{file}</f:debug></td>
       </f:for>
 
-
-			<td><f:link.action action="edit" arguments="{media : media}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{media : media}">Delete</f:link.action></td>
 		</tr>
 	</f:for>
 </table>
