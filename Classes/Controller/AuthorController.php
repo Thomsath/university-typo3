@@ -28,6 +28,15 @@ class AuthorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
   protected $authorRepository = null;
 
 
+  /**
+   * mediaRepository
+   *
+   * @var \Artbdg\MediaArtbdg\Domain\Repository\MediaRepository
+   * @inject
+   */
+  protected $mediaRepository = null;
+
+
     /**
      * action list
      *
@@ -40,6 +49,18 @@ class AuthorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     }
 
     /**
+     * action showMedia
+     *
+     * @param \Artbdg\MediaArtbdg\Domain\Model\Media $media
+     * @return void
+     */
+    public function showMediaAction(\Artbdg\MediaArtbdg\Domain\Model\Media $media)
+    {
+
+
+    }
+
+    /**
      * action show
      *
      * @param \Artbdg\MediaArtbdg\Domain\Model\Author $author
@@ -48,5 +69,11 @@ class AuthorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     public function showAction(\Artbdg\MediaArtbdg\Domain\Model\Author $author)
     {
         $this->view->assign('author', $author);
+        $medias = $this->mediaRepository->findByAuhtor($author);
+        $this->view->assign('medias', $medias);
+
     }
+
+
+
 }
