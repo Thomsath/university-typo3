@@ -13,33 +13,38 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Listing for Author</h1>
 
 <f:flashMessages />
+<div class="container">
 
-<table  class="tx_mediaartbdg" >
-	<tr>
-		<th><f:translate key="tx_mediaartbdg_domain_model_author.name" /></th>
-		<th><f:translate key="tx_mediaartbdg_domain_model_author.bio" /></th>
-		<th><f:translate key="tx_mediaartbdg_domain_model_author.pictures" /></th>
-		<th> </th>
-		<th> </th>
-	</tr>
+  <div  class="tx_mediaartbdg" >
 
-	<f:for each="{authors}" as="author">
-		<tr>
-			<td><f:link.action action="show" arguments="{author : author}"> {author.name}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{author : author}"> {author.bio}</f:link.action></td>
+    <div class="row">
+      <f:for each="{authors}" as="author">
+        <div class="col-md-3">
+          <div class="border">
+      			<f:link.action action="show" arguments="{author : author}"> {author.name}</f:link.action>
+            <f:for each="{pictures}" as ="picture">
+            <!-- Marche paaaaaaaaaaas -->
+            <f:image src="{picture.originalResource.publicUrl}" width="200"/>
+      			   <f:debug>{picture}</f:debug>
+            </f:for>
+          </div>
 
-      <f:for each="{pictures}" as ="picture">
-			   <td><f:debug>{picture}</f:debug></td>
-      </f:for>
+        </div>
+    	</f:for>
+    </div>
 
-			<td><f:link.action action="edit" arguments="{author : author}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{author : author}">Delete</f:link.action></td>
-		</tr>
-	</f:for>
-</table>
+  </div>
+
+</div>
 
 </f:section>
 </html>
+
+<style>
+.border{
+  border: 1px solid #ff8700;
+  border-radius: 5px;
+}
+</style>

@@ -1,30 +1,74 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<table class="tx-media-artbdg" >
-	<tr>
-		<td>
-			<f:translate key="tx_mediaartbdg_domain_model_author.name" />
-		</td>
-		<td>
-		{author.name}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_mediaartbdg_domain_model_author.bio" />
-		</td>
-		<td>
-		{author.bio}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_mediaartbdg_domain_model_author.pictures" />
-		</td>
-		<td>
-				<f:for each="{author.pictures}" as="image" >
-					<f:image src="{image.originalResource.publicUrl}" width="200"/>
-				</f:for>
-		</td>
-	</tr>
-</table>
+<div class="tx-media-artbdg" >
+
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="marginT20 inline"> {author.name}</h3>
+			<f:for each="{author.socials}" as="social" >
+				<f:link.external uri='{social.title}' target="_blank" class="marginL25"><i class="fa fa-twitter-square iconTwitter"></i></f:link.external>
+			</f:for>
+		</div>
+	</div>
+
+	<div class="row imgAuteur">
+		<div class="col-md-4 center">
+			<f:for each="{author.pictures}" as="image" >
+				<f:image src="{image.originalResource.publicUrl}" width="200"/>
+			</f:for>
+		</div>
+		<div class="col-md-8">
+			<f:format.html>{author.bio}</f:format.html>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<f:for each="{author.medias}" as="media" >
+				<f:link.action action="show" arguments="{media : medias}"> {media.name}</f:link.action>
+			</f:for>
+		</div>
+	</div>
+
+</div>
+
+<hr>
 </html>
+
+<style>
+
+.marginT20{
+	margin-top: 20px;
+}
+
+.center{
+	text-align: center;
+}
+
+.imgAuteur{
+	margin: 15px 0 15px 0;
+}
+
+.imgAuteur img{
+	margin-top: 6px;
+}
+
+.inline{
+	display: inline-block;
+}
+
+.iconTwitter{
+	font-size: 28px !important;
+}
+
+.marginL25{
+	margin-left: 25px;
+}
+
+i{
+	color: #ff8700;
+	font-size: 20px !important;
+}
+a{
+	color: #333;
+}
+</style>

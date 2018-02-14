@@ -1,39 +1,91 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<table class="tx-media-artbdg" >
-	<tr>
-		<td>
-			<f:translate key="tx_mediaartbdg_domain_model_media.name" />
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_mediaartbdg_domain_model_media.description" />
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_mediaartbdg_domain_model_media.image" />
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_mediaartbdg_domain_model_media.published" />
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_mediaartbdg_domain_model_media.files" />
-		</td>
-		<td>
-		</td>
-	</tr>
-</table>
+<div class="tx-media-artbdg" >
+
+<div class="row">
+	<div class="col-md-12">
+		<h3 class="marginT20"> {media.name}</h3>
+	</div>
+</div>
+
+<div class="row imgBook">
+	<div class="col-md-12 center">
+		<f:image src="{media.image.originalResource.publicUrl}" width="200"/>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12 center">
+		<i class="fa fa-calendar"></i><p class="datePub">{media.published -> f:format.date()}</p>
+
+		<div class="inline autor">
+			<i class="fa fa-pencil"></i>
+			<f:for each="{media.author}" as="author" >
+			<f:link.action pageUid="{settings.authorsPage}" controller="Author" action="show" arguments="{author : author}" class="paddingL10">
+			{author.name}
+		</f:link.action></td>
+	</f:for>
+</div>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<p><f:format.html>{media.description}</f:format.html></p>
+	</div>
+</div>
+
+<hr>
+
+<div class="row">
+	<div class="col-md-12">
+		<h3> Commentaires </h3>
+		<f:for each="{media.reviews}" as="review" >
+			<blockquote>
+				{review.comment}
+			</blockquote>
+		</f:for>
+	</div>
+</div>
+
+<hr>
+
 </html>
+
+<style>
+.marginT20{
+	margin-top: 20px;
+}
+
+.center{
+	text-align: center;
+}
+
+.imgBook{
+	margin: 15px 0 15px 0;
+}
+
+.datePub{
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.paddingL10{
+	padding-left: 10px;
+}
+
+.inline{
+	display: inline-block;
+}
+
+.autor{
+	margin-left: 20px;
+}
+
+i{
+	color: #ff8700;
+	font-size: 20px !important;
+}
+a{
+	color: #333;
+}
+</style>

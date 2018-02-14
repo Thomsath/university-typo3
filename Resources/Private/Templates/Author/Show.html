@@ -12,12 +12,13 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
-<f:section name="main">
-<h1>Single View for Author</h1>
-
-<f:flashMessages />
-<f:render partial="Author/Properties" arguments="{author:author}" />
-<f:link.action action="list">Back to list</f:link.action><br />
-<f:link.action action="new">New Author</f:link.action>
+  <f:section name="main">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="container">
+        <h1>Details de l'auteur</h1>
+      <f:flashMessages />
+      <f:render partial="Author/Properties" arguments="{author:author}" />
+      <i class="fa fa-chevron-left " style="margin-right : 10px;"></i><f:link.action action="list"> Retour à la liste des auteurs</f:link.action><br />
+    </div>
 	</f:section>
 </html>

@@ -19,4 +19,9 @@ namespace Artbdg\MediaArtbdg\Domain\Repository;
  */
 class MediaRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-    }
+  public function findByAuhtor(\Artbdg\MediaArtbdg\Domain\Model\Author $author){
+    $query=$this->createQuery();
+    $query->matching($query->contains('author', $author));
+    return $query->execute();
+  }
+}
